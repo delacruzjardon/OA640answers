@@ -1,0 +1,350 @@
+{
+  "version": 4,
+  "terraform_version": "1.8.4",
+  "serial": 39,
+  "lineage": "a7063498-5ebb-442a-5155-9610d15c34ed",
+  "outputs": {
+    "user_password": {
+      "value": "V9KbS86ixyBeSaka",
+      "type": "string",
+      "sensitive": true
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "mongodbatlas_auditing",
+      "name": "audit_PRD",
+      "provider": "provider[\"registry.terraform.io/mongodb/mongodbatlas\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "audit_authorization_success": true,
+            "audit_filter": "{\n  \"\": [\n    {\n      \"users\": []\n    },\n    {\n      \"\": [\n        {\n          \"\": [\n            {\n              \"users\": {\n                \"\": {\n                  \"\": [\n                    {\n                      \"db\": \"admin\"\n                    },\n                    {\n                      \"db\": \"\"\n                    }\n                  ]\n                }\n              }\n            },\n            {\n              \"roles\": {\n                \"\": {\n                  \"\": [\n                    {\n                      \"db\": \"admin\"\n                    }\n                  ]\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"\": [\n            {\n              \"atype\": \"authCheck\",\n              \"param.command\": {\n                \"\": [\n                  \"aggregate\",\n                  \"count\",\n                  \"distinct\",\n                  \"group\",\n                  \"mapReduce\",\n                  \"geoNear\",\n                  \"geoSearch\",\n                  \"eval\",\n                  \"find\",\n                  \"getLastError\",\n                  \"getMore\",\n                  \"getPrevError\",\n                  \"parallelCollectionScan\",\n                  \"delete\",\n                  \"findAndModify\",\n                  \"insert\",\n                  \"update\",\n                  \"resetError\"\n                ]\n              }\n            },\n            {\n              \"atype\": {\n                \"\": [\n                  \"authenticate\",\n                  \"createCollection\",\n                  \"createDatabase\",\n                  \"createIndex\",\n                  \"renameCollection\",\n                  \"dropCollection\",\n                  \"dropDatabase\",\n                  \"dropIndex\",\n                  \"createUser\",\n                  \"dropUser\",\n                  \"dropAllUsersFromDatabase\",\n                  \"updateUser\",\n                  \"grantRolesToUser\",\n                  \"revokeRolesFromUser\",\n                  \"createRole\",\n                  \"updateRole\",\n                  \"dropRole\",\n                  \"dropAllRolesFromDatabase\",\n                  \"grantRolesToRole\",\n                  \"revokeRolesFromRole\",\n                  \"grantPrivilegesToRole\",\n                  \"revokePrivilegesFromRole\",\n                  \"enableSharding\",\n                  \"shardCollection\",\n                  \"addShard\",\n                  \"removeShard\",\n                  \"shutdown\",\n                  \"applicationMessage\"\n                ]\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}\n",
+            "configuration_type": "FILTER_JSON",
+            "enabled": true,
+            "id": "67efe19129b7153b550506fb",
+            "project_id": "67efe19129b7153b550506fb"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "mongodbatlas_cloud_backup_schedule",
+      "name": "production",
+      "provider": "provider[\"registry.terraform.io/mongodb/mongodbatlas\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "auto_export_enabled": false,
+            "cluster_id": "67f6c9fea7955230222c5d80",
+            "cluster_name": "OA640",
+            "copy_settings": [
+              {
+                "cloud_provider": "AWS",
+                "frequencies": [
+                  "DAILY",
+                  "HOURLY",
+                  "MONTHLY",
+                  "ON_DEMAND",
+                  "WEEKLY",
+                  "YEARLY"
+                ],
+                "region_name": "US_WEST_1",
+                "replication_spec_id": "67f6c9fda7955230222c5d5c",
+                "should_copy_oplogs": true
+              }
+            ],
+            "export": [],
+            "id": "Y2x1c3Rlcl9uYW1l:T0E2NDA=-cHJvamVjdF9pZA==:NjdlZmUxOTEyOWI3MTUzYjU1MDUwNmZi",
+            "id_policy": "67f6d49298c39c47b6d4615f",
+            "next_snapshot": "2025-04-09T21:45:44Z",
+            "policy_item_daily": [
+              {
+                "frequency_interval": 1,
+                "frequency_type": "daily",
+                "id": "67f6d52fd85700384b3f5fb5",
+                "retention_unit": "days",
+                "retention_value": 14
+              }
+            ],
+            "policy_item_hourly": [
+              {
+                "frequency_interval": 1,
+                "frequency_type": "hourly",
+                "id": "67f6d52fd85700384b3f5fb4",
+                "retention_unit": "days",
+                "retention_value": 4
+              }
+            ],
+            "policy_item_monthly": [],
+            "policy_item_weekly": [
+              {
+                "frequency_interval": 4,
+                "frequency_type": "weekly",
+                "id": "67f6d52fd85700384b3f5fb6",
+                "retention_unit": "weeks",
+                "retention_value": 3
+              }
+            ],
+            "project_id": "67efe19129b7153b550506fb",
+            "reference_hour_of_day": 3,
+            "reference_minute_of_hour": 45,
+            "restore_window_days": 4,
+            "update_snapshots": null,
+            "use_org_and_group_names_in_export_prefix": false
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "mongodbatlas_cluster.atlas_cluster"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "mongodbatlas_cloud_backup_snapshot",
+      "name": "production",
+      "provider": "provider[\"registry.terraform.io/mongodb/mongodbatlas\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "cloud_provider": "AWS",
+            "cluster_name": "OA640",
+            "created_at": "2025-04-09T20:17:03Z",
+            "description": "My Description",
+            "expires_at": "2025-04-10T20:19:23Z",
+            "id": "Y2x1c3Rlcl9uYW1l:T0E2NDA=-cHJvamVjdF9pZA==:NjdlZmUxOTEyOWI3MTUzYjU1MDUwNmZi-c25hcHNob3RfaWQ=:NjdmNmQ1MmZiYzY5YjMwZDk4MTJhMjFk",
+            "master_key_uuid": "",
+            "members": [],
+            "mongod_version": "7.0.18",
+            "project_id": "67efe19129b7153b550506fb",
+            "replica_set_name": "OA640",
+            "retention_in_days": 1,
+            "snapshot_id": "67f6d52fbc69b30d9812a21d",
+            "snapshot_ids": [],
+            "snapshot_type": "onDemand",
+            "status": "completed",
+            "storage_size_bytes": 2134429696,
+            "type": "replicaSet"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "mongodbatlas_cloud_backup_snapshot_restore_job",
+      "name": "production",
+      "provider": "provider[\"registry.terraform.io/mongodb/mongodbatlas\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "cancelled": false,
+            "cluster_name": "OA640",
+            "created_at": "",
+            "delivery_type_config": [
+              {
+                "automated": false,
+                "download": false,
+                "oplog_inc": 0,
+                "oplog_ts": 0,
+                "point_in_time": true,
+                "point_in_time_utc_seconds": 1744231008,
+                "target_cluster_name": "OA640",
+                "target_project_id": "67efe19129b7153b550506fb"
+              }
+            ],
+            "delivery_url": [],
+            "expired": false,
+            "expires_at": "",
+            "finished_at": "2025-04-09T20:53:47Z",
+            "id": "Y2x1c3Rlcl9uYW1l:T0E2NDA=-cHJvamVjdF9pZA==:NjdlZmUxOTEyOWI3MTUzYjU1MDUwNmZi-c25hcHNob3RfcmVzdG9yZV9qb2JfaWQ=:NjdmNmRjZDhhMWZjMjc1ZTFhNWJjMmI4",
+            "project_id": "67efe19129b7153b550506fb",
+            "snapshot_id": null,
+            "snapshot_restore_job_id": "67f6dcd8a1fc275e1a5bc2b8",
+            "timestamp": "2025-04-09T20:17:03Z"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "mongodbatlas_cluster.atlas_cluster"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "mongodbatlas_custom_db_role",
+      "name": "no_deletions",
+      "provider": "provider[\"registry.terraform.io/mongodb/mongodbatlas\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "actions": [
+              {
+                "action": "UPDATE",
+                "resources": [
+                  {
+                    "cluster": false,
+                    "collection_name": "",
+                    "database_name": "test"
+                  }
+                ]
+              },
+              {
+                "action": "INSERT",
+                "resources": [
+                  {
+                    "cluster": false,
+                    "collection_name": "",
+                    "database_name": "test"
+                  }
+                ]
+              },
+              {
+                "action": "FIND",
+                "resources": [
+                  {
+                    "cluster": false,
+                    "collection_name": "",
+                    "database_name": "test"
+                  }
+                ]
+              }
+            ],
+            "id": "cHJvamVjdF9pZA==:NjdlZmUxOTEyOWI3MTUzYjU1MDUwNmZi-cm9sZV9uYW1l:bm9fZGVsZXRpb25z",
+            "inherited_roles": [],
+            "project_id": "67efe19129b7153b550506fb",
+            "role_name": "no_deletions"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "mongodbatlas_database_user",
+      "name": "user-1",
+      "provider": "provider[\"registry.terraform.io/mongodb/mongodbatlas\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "auth_database_name": "admin",
+            "aws_iam_type": "NONE",
+            "id": "YXV0aF9kYXRhYmFzZV9uYW1l:YWRtaW4=-cHJvamVjdF9pZA==:NjdlZmUxOTEyOWI3MTUzYjU1MDUwNmZi-dXNlcm5hbWU=:dXNlci0x",
+            "labels": [],
+            "ldap_auth_type": "NONE",
+            "oidc_auth_type": "NONE",
+            "password": "V9KbS86ixyBeSaka",
+            "project_id": "67efe19129b7153b550506fb",
+            "roles": [
+              {
+                "collection_name": null,
+                "database_name": "admin",
+                "role_name": "no_deletions"
+              }
+            ],
+            "scopes": [
+              {
+                "name": "OA640",
+                "type": "CLUSTER"
+              }
+            ],
+            "username": "user-1",
+            "x509_type": "NONE"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "password"
+              }
+            ]
+          ],
+          "dependencies": [
+            "mongodbatlas_custom_db_role.no_deletions",
+            "random_password.user-1-password"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "mongodbatlas_project_ip_access_list",
+      "name": "instruqt",
+      "provider": "provider[\"registry.terraform.io/mongodb/mongodbatlas\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "aws_security_group": "",
+            "cidr_block": "34.56.26.156/32",
+            "comment": "",
+            "id": "ZW50cnk=:MzQuNTYuMjYuMTU2LzMy-cHJvamVjdF9pZA==:NjdlZmUxOTEyOWI3MTUzYjU1MDUwNmZi",
+            "ip_address": "34.56.26.156",
+            "project_id": "67efe19129b7153b550506fb",
+            "timeouts": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "random_password",
+      "name": "user-1-password",
+      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
+      "instances": [
+        {
+          "schema_version": 3,
+          "attributes": {
+            "bcrypt_hash": "$2a$10$gE3QjybSxAokFf.AmH8lnes6dCMDr/85Wk47fussvcn97fst7CeG.",
+            "id": "none",
+            "keepers": null,
+            "length": 16,
+            "lower": true,
+            "min_lower": 0,
+            "min_numeric": 0,
+            "min_special": 0,
+            "min_upper": 0,
+            "number": true,
+            "numeric": true,
+            "override_special": "_%@",
+            "result": "V9KbS86ixyBeSaka",
+            "special": true,
+            "upper": true
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "result"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "bcrypt_hash"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

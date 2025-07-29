@@ -1,0 +1,13 @@
+public_key="qsvzvqhn"
+private_key="7df8065b-0a4b-46f1-908c-2940877889af"
+project_id="67efe19129b7153b550506fb"
+cluster_name="OA640"
+cloud_provider="AWS"
+region="EU_WEST_1"
+region2="US_WEST_1"
+mongodbversion="7"
+dbuser="dbuser"
+dbuser_password="dbpassword"
+database_name="test"
+ip_address="34.56.26.156"
+point_in_time_utc_seconds=1744231008
