@@ -1,0 +1,31 @@
+{
+  "$or": [
+    {
+      "users": []
+    },
+    {
+      "$and": [
+        {
+          "roles": {
+            "$elemMatch": {
+              "$or": [
+                {
+                  "role": "atlasAdmin",
+                  "db": "admin"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "atype": {
+            "$in": [
+              "createCollection",
+              "createIndex"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
